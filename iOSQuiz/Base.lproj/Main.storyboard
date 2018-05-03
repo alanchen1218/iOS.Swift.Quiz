@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYh-fi-UqH">
-                                <rect key="frame" x="194" y="343" width="106" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.71967470397950473" blue="0.63383955753514321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZS-IT-ko6"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-eZ-gsx">
-                                <rect key="frame" x="16" y="515" width="343" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-eZ-gsx">
+                                <rect key="frame" x="20" y="519.66666666666663" width="335" height="81.333333333333371"/>
                                 <string key="text">Create the user interface. As we create the UI, we will get a better understanding of our application. Then we breathe life into our application.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3a-y2-q7q">
-                                <rect key="frame" x="65" y="343" width="102" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3a-y2-q7q">
+                                <rect key="frame" x="60" y="343" width="100" height="59"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.95686274510000002" green="0.94059396559999997" blue="0.94317395130000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Answer"/>
@@ -45,15 +35,58 @@
                                     <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXP-06-i8g"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is the first step of iOS development?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DM-60-HK7">
-                                <rect key="frame" x="26" y="154" width="322" height="71"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FNv-es-0wY">
+                                <rect key="frame" x="26" y="154" width="322" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-eE-oYI">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="73"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9BE-wh-4yz">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="73"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYh-fi-UqH">
+                                <rect key="frame" x="225" y="343" width="100" height="59"/>
+                                <color key="backgroundColor" red="1" green="0.71967470397950473" blue="0.63383955753514321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="bPD-So-esy"/>
+                                    <constraint firstAttribute="width" constant="100" id="g2C-Qc-QhH"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZS-IT-ko6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the first step of iOS development?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DM-60-HK7">
+                                <rect key="frame" x="26" y="154" width="322" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G3a-y2-q7q" firstAttribute="top" secondItem="dYh-fi-UqH" secondAttribute="top" id="25r-U2-Bk0"/>
+                            <constraint firstItem="dYh-fi-UqH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="343" id="2TN-O2-jg8"/>
+                            <constraint firstItem="7DM-60-HK7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="26" id="5Rw-Wu-wPM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eyC-eZ-gsx" secondAttribute="bottom" constant="177" id="5sC-ar-e7J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dYh-fi-UqH" secondAttribute="trailing" constant="50" id="7qk-TK-bgN"/>
+                            <constraint firstAttribute="trailing" secondItem="7DM-60-HK7" secondAttribute="trailing" constant="27" id="FDG-MU-zfs"/>
+                            <constraint firstAttribute="trailing" secondItem="7DM-60-HK7" secondAttribute="trailing" constant="27" id="Mf0-Aa-2TA"/>
+                            <constraint firstItem="G3a-y2-q7q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="NDJ-Ty-Ver"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eyC-eZ-gsx" secondAttribute="trailing" constant="20" id="TEF-bK-ph6"/>
+                            <constraint firstItem="dYh-fi-UqH" firstAttribute="leading" secondItem="G3a-y2-q7q" secondAttribute="trailing" constant="65" id="fwf-95-TzJ"/>
+                            <constraint firstItem="7DM-60-HK7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="26" id="ilW-0t-0vX"/>
+                            <constraint firstItem="G3a-y2-q7q" firstAttribute="firstBaseline" secondItem="dYh-fi-UqH" secondAttribute="baseline" id="j9u-Ai-KBN"/>
+                            <constraint firstItem="7DM-60-HK7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="26" id="m1P-5c-0sI"/>
+                            <constraint firstItem="eyC-eZ-gsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rkC-IW-w6P"/>
+                            <constraint firstItem="7DM-60-HK7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="slD-2C-RbD"/>
+                            <constraint firstAttribute="trailing" secondItem="7DM-60-HK7" secondAttribute="trailing" constant="27" id="xQb-au-3sj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
